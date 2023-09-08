@@ -28,16 +28,16 @@ const productSchema = new mongoose.Schema(
       trim: true,
       maxlength: 32,
     },
-    // category: {
-    //   type: ObjectId,
-    //   ref: "Category",
-    // },
-    // subs: [
-    //   {
-    //     type: ObjectId,
-    //     ref: "Sub",
-    //   },
-    // ],
+    category: {
+      type: ObjectId,
+      ref: "Category",
+    },
+    subs: [
+      {
+        type: ObjectId,
+        ref: "Sub",
+      },
+    ],
     quantity: Number,
     sold: {
       type: Number,
@@ -52,11 +52,11 @@ const productSchema = new mongoose.Schema(
     },
     color: {
       type: String,
-      // enum: ["Black", "Brown", "Silver", "White", "Blue"],
+      enum: ["Black", "Brown", "Silver", "White", "Blue"],
     },
     brand: {
       type: String,
-      // enum: ["Apple", "Samsung", "Microsoft", "Lenovo", "ASUS"],
+      enum: ["Apple", "Samsung", "Microsoft", "Lenovo", "ASUS"],
     },
     // ratings: [
     //   {

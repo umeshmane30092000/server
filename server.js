@@ -29,6 +29,7 @@ app.use(cors());
 // routes middleware
 readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
 
+
 // port
 const port = process.env.PORT || 8000;
 
